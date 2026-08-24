@@ -1,0 +1,27 @@
+.section-header {
+  margin-bottom: 2.5rem;
+  max-width: 40rem;
+}
+
+.section-header__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-header__title {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.section-header__subtitle {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}

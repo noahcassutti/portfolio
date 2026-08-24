@@ -1,0 +1,22 @@
+<section class="hero">
+  <p class="hero__eyebrow">Portfolio</p>
+  <h1>{{ profile.name }}</h1>
+  <p class="hero__headline">{{ profile.headline }}</p>
+  <p class="hero__bio">{{ profile.bio }}</p>
+  <div class="hero__actions">
+    <a class="btn btn--primary" routerLink="/proyectos">Ver proyectos</a>
+    <a class="btn btn--ghost" routerLink="/contacto">Contacto</a>
+  </div>
+</section>
+
+<section class="featured" aria-labelledby="featured-title">
+  <div class="featured__head">
+    <h2 id="featured-title">Proyectos destacados</h2>
+    <a class="text-link" routerLink="/proyectos">Todos los proyectos</a>
+  </div>
+  <div class="grid">
+    @for (project of featured; track project.id) {
+      <app-project-card [project]="project" />
+    }
+  </div>
+</section>

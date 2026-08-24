@@ -1,0 +1,83 @@
+:root {
+  --bg: #eef1f5;
+  --surface: #f8fafc;
+  --text: #1c2430;
+  --muted: #5a6573;
+  --border: #cfd6de;
+  --accent: #2563eb;
+  --max-width: 1080px;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #f8fafc;
+}
+
+.btn--primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn--ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--surface);
+}
+
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.text-link {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}

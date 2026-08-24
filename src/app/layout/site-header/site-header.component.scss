@@ -1,0 +1,45 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+}
+
+.header__brand {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem 1rem;
+}
+
+.header__nav a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.header__nav a:hover,
+.header__nav a.is-active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}

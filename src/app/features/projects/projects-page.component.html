@@ -1,0 +1,34 @@
+<app-section-header
+  eyebrow="Trabajo"
+  title="Proyectos"
+  subtitle="Sistemas de gestión, APIs REST y productos fullstack. Filtrá por tecnología."
+/>
+
+<div class="filters" role="group" aria-label="Filtrar por tecnología">
+  <button
+    type="button"
+    class="chip"
+    [class.is-active]="selectedTech() === null"
+    (click)="selectTech(null)"
+  >
+    Todas
+  </button>
+  @for (tech of technologies; track tech) {
+    <button
+      type="button"
+      class="chip"
+      [class.is-active]="selectedTech() === tech"
+      (click)="selectTech(tech)"
+    >
+      {{ tech }}
+    </button>
+  }
+</div>
+
+<div class="grid">
+  @for (project of filtered(); track project.id) {
+    <app-project-card [project]="project" />
+  } @empty {
+    <p class="empty">No hay proyectos con esa tecnología.</p>
+  }
+</div>

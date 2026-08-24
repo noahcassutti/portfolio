@@ -1,0 +1,47 @@
+<app-section-header
+  eyebrow="Hablemos"
+  title="Contacto"
+  subtitle="Escribime directamente por LinkedIn o explorá mis repositorios en GitHub."
+/>
+
+<div class="contact-grid">
+  <a
+    [href]="profile.linkedin"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="contact-card"
+    aria-label="Abrir perfil de LinkedIn de Noah Cassutti en pestaña nueva"
+  >
+    <div class="contact-card__main">
+      <div class="contact-card__icon-badge" aria-hidden="true">in</div>
+      <div>
+        <h2 class="contact-card__title">LinkedIn</h2>
+        <p class="contact-card__url">{{ profile.linkedin.replace('https://', '') }}</p>
+      </div>
+    </div>
+    <div class="contact-card__action">
+      <span>Conectar</span>
+      <span class="contact-card__arrow" aria-hidden="true">↗</span>
+    </div>
+  </a>
+
+  <a
+    [href]="profile.github"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="contact-card"
+    aria-label="Abrir perfil de GitHub de Noah Cassutti en pestaña nueva"
+  >
+    <div class="contact-card__main">
+      <div class="contact-card__icon-badge" aria-hidden="true">gh</div>
+      <div>
+        <h2 class="contact-card__title">GitHub</h2>
+        <p class="contact-card__url">{{ profile.github.replace('https://', '') }}</p>
+      </div>
+    </div>
+    <div class="contact-card__action">
+      <span>Ver repos</span>
+      <span class="contact-card__arrow" aria-hidden="true">↗</span>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="header__inner">
+    <a class="header__brand" routerLink="/" aria-label="Inicio">{{ profile.name }}</a>
+    <nav class="header__nav" aria-label="Principal">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,23 @@
+<article class="card">
+  <p class="card__meta">{{ project().institution }} · {{ project().period }}</p>
+  <h2 class="card__title">{{ project().title }}</h2>
+  <p class="card__summary">{{ project().summary }}</p>
+  @if (project().highlights.length) {
+    <ul class="card__list">
+      @for (item of project().highlights; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  }
+  <div class="card__tags">
+    @for (tech of project().stack; track tech) {
+      <app-tech-badge [label]="tech" />
+    }
+  </div>
+  <div class="card__links">
+    <a [href]="project().repoUrl" target="_blank" rel="noopener noreferrer">Repositorio</a>
+    @if (project().demoUrl; as demo) {
+      <a [href]="demo" target="_blank" rel="noopener noreferrer">Demo</a>
+    }
+  </div>
+</article>

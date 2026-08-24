@@ -1,0 +1,155 @@
+.groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.group {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.group h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.group__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.education-section {
+  margin-top: 3.5rem;
+}
+
+.education-section__header {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--border);
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: -1.95rem;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2.5px solid var(--accent);
+}
+
+.timeline__content {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.timeline__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline__degree {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline__institution {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.timeline__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.timeline__status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.timeline__period {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.timeline__description {
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.timeline__highlights {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+
+  li {
+    margin-bottom: 0.35rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

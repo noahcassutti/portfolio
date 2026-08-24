@@ -1,0 +1,21 @@
+.shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  min-height: calc(100vh - 10rem);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  padding: 0.5rem 0.75rem;
+  background: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}

@@ -1,0 +1,53 @@
+<app-section-header
+  eyebrow="Especialización"
+  title="Stack & Formación"
+  subtitle="Backend primero: APIs, persistencia y arquitectura. Angular cuando el producto lo necesita."
+/>
+
+<div class="groups" aria-label="Tecnologías agrupadas">
+  @for (group of groups; track group.title) {
+    <section class="group">
+      <h2>{{ group.title }}</h2>
+      <div class="group__items">
+        @for (item of group.items; track item) {
+          <app-tech-badge [label]="item" />
+        }
+      </div>
+    </section>
+  }
+</div>
+
+<section class="education-section" aria-labelledby="education-title">
+  <div class="education-section__header">
+    <h2 id="education-title">Educación y Trayectoria</h2>
+    <p class="education-section__subtitle">Formación universitaria y técnica orientada al desarrollo de software y sistemas web.</p>
+  </div>
+
+  <div class="timeline">
+    @for (item of education; track item.institution) {
+      <article class="timeline__item">
+        <div class="timeline__marker" aria-hidden="true"></div>
+        <div class="timeline__content">
+          <div class="timeline__header">
+            <div>
+              <h3 class="timeline__degree">{{ item.degree }}</h3>
+              <p class="timeline__institution">{{ item.institution }}</p>
+            </div>
+            <div class="timeline__meta">
+              <span class="timeline__status">{{ item.status }}</span>
+              <span class="timeline__period">{{ item.period }}</span>
+            </div>
+          </div>
+          <p class="timeline__description">{{ item.description }}</p>
+          @if (item.highlights.length) {
+            <ul class="timeline__highlights">
+              @for (h of item.highlights; track h) {
+                <li>{{ h }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </article>
+    }
+  </div>
+</section>

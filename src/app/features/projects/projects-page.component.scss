@@ -1,0 +1,47 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chip.is-active {
+  border-color: var(--accent);
+  background: #dbeafe;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
