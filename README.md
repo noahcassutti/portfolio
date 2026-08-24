@@ -14,5 +14,7 @@ Abre `http://localhost:4200/`.
 
 ```bash
 npm run build
+
+Vercel: https://portfolio-noah-cassutti-64.vercel.app/
 ```
 
